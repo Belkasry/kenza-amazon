@@ -50,7 +50,7 @@ export default {
 
       let config = {
         method: 'get',
-        url: '/api/csv-to-json',
+        url: 'https://kenza-amazon.herokuapp.com/public/index.php/api/csv-to-json',
       };
 
       axios.request(config)
@@ -68,7 +68,7 @@ export default {
       formData.append('csv', this.csvFile)
 
       try {
-        const response = await axios.post('/api/csv', formData, {
+        const response = await axios.post('https://kenza-amazon.herokuapp.com/public/index.php/api/csv', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
