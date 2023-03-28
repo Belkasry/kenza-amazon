@@ -1,0 +1,23 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/dev01/Documents/kenza/kenza-amazon/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_104b2f72"
+  },
+  {
+    "name": "upload-csv",
+    "path": "/upload-csv",
+    "component": "/Users/dev01/Documents/kenza/kenza-amazon/pages/upload-csv/index.vue",
+    "chunkName": "pages/upload-csv/index",
+    "_name": "_32034856"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/dev01/Documents/kenza/kenza-amazon/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1d73e96a"
+  }
+]
