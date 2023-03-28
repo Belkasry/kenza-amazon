@@ -131,7 +131,7 @@ export default {
   ,
   methods: {
     exportToExcel() {
-      axios.post('http://127.0.0.1:8000/api/export', {
+      axios.post('https://kenza-amazon.herokuapp.com/public/index.php/api/export', {
         data: this.items,
         mapping: this.selectedMapping,
         template: this.templateKeys,
@@ -150,7 +150,7 @@ export default {
     },
     loadAvailableMappings() {
       axios
-        .get("http://127.0.0.1:8000/api/mappings")
+        .get("https://kenza-amazon.herokuapp.com/public/index.php/api/mappings")
         .then((response) => {
           this.availableMappings = response.data;
         })
@@ -176,7 +176,7 @@ export default {
     async saveMappingConfig() {
       console.log(this.mappings)
       axios
-        .post("http://127.0.0.1:8000/api/config", {
+        .post("https://kenza-amazon.herokuapp.com/public/index.php/api/config", {
           name: this.mappingName,
           mappings: this.mappings,
         })
@@ -192,7 +192,7 @@ export default {
     }
     ,
     async fetchTemplateKeys() {
-      const response = await axios.get('http://127.0.0.1:8000/api/template')
+      const response = await axios.get('https://kenza-amazon.herokuapp.com/public/index.php/api/template')
       this.templateKeys = response.data;
     }
     ,
@@ -200,7 +200,7 @@ export default {
 
       let config = {
         method: 'get',
-        url: 'http://127.0.0.1:8000/api/csv-to-json',
+        url: 'https://kenza-amazon.herokuapp.com/public/index.php/api/csv-to-json',
       };
 
       axios.request(config)
@@ -219,7 +219,7 @@ export default {
       formData.append('csv', this.csvFile)
 
       try {
-        const response = await axios.post('http://127.0.0.1:8000/api/csv', formData, {
+        const response = await axios.post('https://kenza-amazon.herokuapp.com/public/index.php/api/csv', formData, {
           headers: {
             'Content-Type': 'multipart/form-data'
           }
